@@ -1,0 +1,69 @@
+body {
+  background: #FAF6EC;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background: #1F6B3B;
+  color: white;
+  padding: 24px;
+}
+
+main {
+  padding: 16px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: #1F6B3B;
+}
+
+footer {
+  background: #333333;
+  color: white;
+  padding: 16px;
+}
+.card:hover {
+    transition: box-shadow 0.3s;
+}
+.joinBtn {
+  width: 10em;
+  height: 5ex;
+  background-color: gold;
+  border: 2px solid firebrick;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.joinBtn:hover {
+  background-color: bisque;
+}
+nav a {
+  color: white;
+  margin-right: 12px;
+}
+
+.badge {
+  background: #C0392B;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+.produto img {
+  display: block;
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}
