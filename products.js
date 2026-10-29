@@ -39,10 +39,13 @@ function renderProducts(products) {
 async function loadProducts() {
   const { data, error } = await supabase.from("products").select("*")
   if (error) {
-    console.log("Erro ao carregar produtos:", error.message)
+    console.erro("Erro ao carregar produtos:", error.message)
     return
   }
   renderProducts(data)
 }
+
+const lista = document.querySelector("#lista-produtos")
+lista.textContent = "Não foi possível carregar os produtos. Tente mais tarde."
 
 loadProducts()
