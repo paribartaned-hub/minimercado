@@ -65,7 +65,6 @@ obrigado.textContent = "Obrigado pela visita "
 document.querySelector("footer").append(obrigado)
 
 const { data, error } = await supabase.from("products").select("*").eq("in_stock", true)
-  import { supabase } from "./supa.js";
 
 async function loadStoreInfo() {
   const { data, error } = await supabase.from("store_info").select("*").single();
