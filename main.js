@@ -64,11 +64,7 @@ const obrigado = document.createElement("p")
 obrigado.textContent = "Obrigado pela visita "
 document.querySelector("footer").append(obrigado)
 
-const especial = produtos[new Date().getDay() % produtos.length]
-
-document.querySelector("#especial h2").textContent = "special de hoje"
-document.querySelector("#especial p").textContent =
-  `${especial.name} por apenas ${formatPrice(especial.price)}!`
+const { data, error } = await supabase.from("products").select("*").eq("in_stock", true)
   import { supabase } from "./supa.js";
 
 async function loadStoreInfo() {
