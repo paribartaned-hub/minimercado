@@ -47,4 +47,4 @@ lista.textContent = "Não foi possível carregar os produtos. Tente mais tarde."
   renderProducts(data)
 }
 
-loadProducts()
+loadProducts().catch(err => console.error("products failed:", err))
