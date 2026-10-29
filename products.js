@@ -47,7 +47,4 @@ lista.textContent = "Não foi possível carregar os produtos. Tente mais tarde."
   renderProducts(data)
 }
 
-const lista = document.querySelector("#lista-produtos")
-lista.textContent = "Não foi possível carregar os produtos. Tente mais tarde."
-
 loadProducts()
