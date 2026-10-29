@@ -90,4 +90,4 @@ async function loadStoreInfo() {
   document.querySelector("#telefone").textContent = data.phone;
 }
 
-loadStoreInfo();
+loadStoreInfo().catch(err => console.error("loadStoreInfo failed:", err))
