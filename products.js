@@ -44,7 +44,4 @@ async function loadProducts() {
   }
   renderProducts(data)
 }
-const lista = document.querySelector("#lista-produtos")
-lista.textContent = "Não foi possível carregar os produtos. Tente mais tarde."
-
 loadProducts().catch(err => console.error("#listaproducts failed:", err))
