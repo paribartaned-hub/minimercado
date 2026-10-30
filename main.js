@@ -1,4 +1,5 @@
-// site do Minimercado da Família 
+import { supabase } from "./supa.js"
+
 console.log("Bem-vindo ao Minimercado da Família!")
 console.log("Hoje o Pão custa:")
 console.log(4.50)
@@ -64,12 +65,11 @@ const obrigado = document.createElement("p")
 obrigado.textContent = "Obrigado pela visita "
 document.querySelector("footer").append(obrigado)
 
- const especial = produtos[new Date().getDay() % produtos.length] 
+const { data, error } = await supabase.from("products").select("*").eq("in_stock", true)
   
  document.querySelector("#especial h2").textContent = "special de hoje" 
  document.querySelector("#especial p").textContent = 
    `${especial.name} por apenas ${formatPrice(especial.price)}!` 
-const { data, error } = await supabase.from("products").select("*").eq("in_stock", true)
 
 async function loadStoreInfo() {
   const { data, error } = await supabase.from("store_info").select("*").single();
