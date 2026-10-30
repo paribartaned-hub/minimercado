@@ -27,7 +27,7 @@ function renderProducts(products) {
 
     if (!produto.in_stock) {
       const badge = document.createElement("span")
-      badge.className = "esgotado"
+      badge.className = "badge"
       badge.textContent = "esgotado"
       card.append(badge)
     }
