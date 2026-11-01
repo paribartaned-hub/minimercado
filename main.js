@@ -69,7 +69,7 @@ const { data, error } = await supabase.from("products").select("*").eq("in_stock
   
  document.querySelector("#especial h2").textContent = "special de hoje" 
  document.querySelector("#especial p").textContent = 
-   `${especial.name} por apenas ${formatPrice(especial.price)}!` 
+   `${products.name} por apenas ${formatPrice(products.price)}!` 
 
 async function loadStoreInfo() {
   const { data, error } = await supabase.from("store_info").select("*").single();
